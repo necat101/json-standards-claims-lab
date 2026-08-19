@@ -1,0 +1,17 @@
+v22.22.3
+
+== Correctness ==
+int_parse('9007199254740993') = 9007199254740992 type=number
+dup_parse('{"x":1,"x":2}') = { x: 2 }
+scalar_parse('42') = 42
+JSON.stringify(NaN) = null
+JSON.parse('NaN') raised SyntaxError: "NaN" is not valid JSON
+JSON.stringify(Infinity) = null
+JSON.parse('Infinity') raised SyntaxError: "Infinity" is not valid JSON
+JSON.stringify(-Infinity) = null
+JSON.parse('-Infinity') raised SyntaxError: No number after minus sign in JSON at position 1 (line 1 column 2)
+
+== Timing (100,000 parses per run, median of 7 runs, ms) ==
+int_parse: median 85.70 ms, runs 83.6, 84.0, 84.3, 85.7, 86.4, 86.4, 87.1
+dup_parse: median 80.58 ms, runs 77.7, 78.6, 79.6, 80.6, 81.6, 83.7, 83.9
+scalar_parse: median 17.57 ms, runs 17.0, 17.3, 17.4, 17.6, 17.6, 18.0, 18.4

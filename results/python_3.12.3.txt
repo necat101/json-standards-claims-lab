@@ -1,0 +1,18 @@
+Python 3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]
+
+== Correctness ==
+int_parse('9007199254740993') = 9007199254740993 type=int
+dup_parse('{"x":1,"x":2}') = {'x': 2}
+scalar_parse('42') = 42
+json.dumps(NaN) = NaN
+json.loads('NaN') = nan
+json.dumps(Infinity) = Infinity
+json.loads('Infinity') = inf
+json.dumps(-Infinity) = -Infinity
+json.loads('-Infinity') = -inf
+json.dumps(NaN, allow_nan=False) -> raises ValueError
+
+== Timing (100,000 parses per run, median of 7 runs, ms) ==
+int_parse: median 127.26 ms, runs 123.6, 124.3, 126.5, 127.3, 130.1, 130.6, 131.5
+dup_parse: median 147.44 ms, runs 145.4, 146.1, 147.4, 147.4, 147.5, 148.4, 150.0
+scalar_parse: median 122.48 ms, runs 119.3, 120.6, 121.3, 122.5, 124.4, 124.9, 126.0
