@@ -15,6 +15,7 @@ All four are areas where Wikipedia's summary is broadly correct but occasionally
 - ECMA-404, 2nd edition, December 2017: https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf
 - Python 3.12 documentation, json — JSON encoder and decoder: https://docs.python.org/3.12/library/json.html (implementation tested: CPython 3.12.3)
 - ECMAScript® 2026 Language Specification (ECMA-262, 17th edition, June 2026), §25.5 JSON: https://tc39.es/ecma262/2026/#sec-json-object (implementation tested: Node.js v22.22.3 / V8)
+- Verification material / benchmark scripts / raw results: https://github.com/necat101/json-standards-claims-lab
 
 RFC 8259 obsoletes RFC 7159, which obsoleted RFC 4627. ECMA-404 and ISO/IEC 21778:2017 describe the same grammar.
 
